@@ -1,0 +1,39 @@
+<project name="Rubiks" default="build" basedir=".">
+	<description>
+        	Build file for the main project import executable.
+	</description>
+	<!-- set global properties for this build -->
+
+	<property name="src"   location="src"           />
+	<property name="build" location="build"         />
+	<property name="install"  location="install"    />
+	<property name="base"  location="${src}"        />
+
+
+	<target name="init">
+		<!-- Create the time stamp -->
+		<tstamp/>
+		<!-- Create the build directory structure used by compile --> 
+		<mkdir dir="${build}"/>
+	</target>
+
+	<target name="build" depends="init" description="compile the source " >
+		<!-- Compile the java code from ${src} into ${build} -->
+		<javac srcdir="${src}" destdir="${build}" excludes="CVS **/junit/**" />
+	</target>
+
+	<target name="install" depends="build" description="generate the distribution" >
+		<!-- Create the distribution directory -->
+		<mkdir dir="${install}"/>
+
+		<!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
+		<jar jarfile="${install}/SimpleWalker.jar" manifest="manifest" basedir="${build}"/>
+	</target>
+
+	<target name="clean" description="clean up" >
+		<!-- Delete the ${build} and ${install} directory trees -->
+		<delete dir="${build}"/>
+		<delete dir="${install}"/>
+	</target>
+</project>
+

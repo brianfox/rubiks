@@ -1,0 +1,41 @@
+6/25/2009
+
+-Snub cube- looks interesting.  It has 24 vertices corresponding
+to the 24 possible 2x2 cube moves.  Oddly enough, the non-regular 
+polygons are squares...
+
+-8-cells- look interesting.  The path of operations on a 1x1 cube
+made out of toothpicks looks like a strong potential for modeling.
+Oddly, the path has 24 vertices again.  A magic number haunts the 
+innards of the cube.
+
+-Flatland- looks like an interesting read.
+
+-Tesseract- looks like an interesting concept.
+ 
+ 
+ 
+ ==============================
+ 
+ 7/27/2009
+ 
+ Shifted interest towards graphing.  
+ 
+ - Blender and Python - looks like it has potential for "pretty graphs" 
+ with proper shading, lighting, and radiosity.  In reality, Blender
+ chokes on graphs larger than level 7 or 8.
+ 
+ - walrus and libsea - looks like this software has potential for 
+ very large exponential graphs.  Libsea has zero source documentation
+ however.  So the learning curve is steeper than it needs to be. 
+ Walrus has some oddities with filling the entire graph boundaries
+ and node positions.  But this might be a result of using very simple 
+ graphs.
+ 
+ - Java3d - looks like this has potential for stacked radial graphs.
+ This might be interesting for comparing spatial, color mapped, 
+ natural, and symmetrical cube storage techniques.  
+ 
+
+ 
+ 
