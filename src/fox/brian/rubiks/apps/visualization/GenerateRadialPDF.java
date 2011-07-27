@@ -23,7 +23,7 @@ import fox.brian.visualization.medium.Page;
 
 public class GenerateRadialPDF {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		
 		CmdLineParser parser = new CmdLineParser();
 		Option optInFile     = parser.addStringOption ('i',"infile" );

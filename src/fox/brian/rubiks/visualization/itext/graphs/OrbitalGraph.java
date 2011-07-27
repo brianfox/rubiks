@@ -18,6 +18,8 @@ package fox.brian.rubiks.visualization.itext.graphs;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
+import java.io.IOException;
+
 import fox.brian.rubiks.model.stateful.tree.SolutionNode;
 import fox.brian.rubiks.model.stateful.tree.SolutionTree;
 import fox.brian.rubiks.model.stateful.tree.TreeStatistics;
@@ -33,7 +35,7 @@ public class OrbitalGraph extends Graph {
 	private Point center;
 	Graphics2D g2;
 	
-	public OrbitalGraph(SolutionTree tree, Document document) {
+	public OrbitalGraph(SolutionTree tree, Document document) throws IOException {
 		super(tree, document);
 		g2 = document.getGraphics2D();
 		

@@ -22,6 +22,7 @@ import java.awt.Graphics2D;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.GeneralPath;
 import java.awt.geom.Line2D;
+import java.io.IOException;
 import java.util.HashMap;
 
 import fox.brian.rubiks.model.operators.Twist;
@@ -51,7 +52,7 @@ public class RadialGraph extends Graph {
 	static int radialCounter = 1;
 	static int counter3 = 0;
 	
-	public RadialGraph(SolutionTree tree, Document document, GraphicalOptionManager o) {
+	public RadialGraph(SolutionTree tree, Document document, GraphicalOptionManager o) throws IOException {
 		
 		super(tree, document);
 		g2 = document.getGraphics2D();

@@ -18,6 +18,7 @@ import java.awt.RenderingHints;
 import java.io.Closeable;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.HashMap;
 
 import com.itextpdf.text.DocumentException;
@@ -112,7 +113,7 @@ public class Document implements Closeable {
 	}
 
 	
-	public void addLayer(String layerName) {
+	public void addLayer(String layerName) throws IOException {
 		PdfLayer layer = new PdfLayer(layerName, writer);
 		namedLayers.put(layerName,layer);
 	}
