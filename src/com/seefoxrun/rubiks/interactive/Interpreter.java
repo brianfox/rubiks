@@ -90,7 +90,7 @@
  *
  */
 
-package com.seefoxrun.rubiks.apps.interactive;
+package com.seefoxrun.rubiks.interactive;
 
 import java.io.*;
 import java.util.HashMap;

@@ -4,7 +4,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import com.seefoxrun.rubiks.apps.interactive.Interpreter.InterpreterException;
+import com.seefoxrun.rubiks.interactive.Interpreter;
+import com.seefoxrun.rubiks.interactive.Interpreter.InterpreterException;
 
 
 public class TextPlayer {

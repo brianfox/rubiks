@@ -1,11 +1,11 @@
-package com.seefoxrun.rubiks.apps.interactive;
+package com.seefoxrun.rubiks.interactive;
 
 import java.io.PrintStream;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.regex.Pattern;
 
-import com.seefoxrun.rubiks.apps.interactive.Interpreter.InterpreterException;
+import com.seefoxrun.rubiks.interactive.Interpreter.InterpreterException;
 
 class PatternMethod {
 	private Pattern pattern;
