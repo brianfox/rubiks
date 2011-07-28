@@ -13,8 +13,6 @@
 
 package com.seefoxrun.visualization.medium;
 
-import com.seefoxrun.visualization.Point;
-import com.seefoxrun.visualization.RectRegion;
 import com.seefoxrun.visualization.measurement.Units;
 import com.seefoxrun.visualization.measurement.Value;
 
@@ -71,11 +69,13 @@ public class Page {
 		return new Value(height);
 	}
 
+	/*
 	public RectRegion getDrawingArea() {
 		Point ll;// = new Point();
 		Point ur;//
 		return null; //new RectRegion(ll,ur);
 	}
+	*/
 	
 
 }

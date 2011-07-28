@@ -33,7 +33,7 @@ public class Simple extends Object3D {
 
 	@Override
 	public void draw(Graphics2D g, Matrix m) {
-		Matrix vischeck = this.getNormal(m);
+		// Matrix vischeck = this.getNormal(m);
 		//		if (vischeck.getAt(2) <= 0)
 			p.draw(g,this.squeeze(m));
 	}

@@ -326,8 +326,8 @@ public class SolutionTree implements Serializable, Iterable<SolutionNode> {
 		if (leaves.isEmpty())
 			return false;
 		
-		int nliving = 0;
-		int ndead = 0;
+		// int nliving = 0;
+		// int ndead = 0;
 		for (Cube c : leaves) {
 			boolean living = false;
 			for (Face f : Face.values()) {
@@ -341,9 +341,10 @@ public class SolutionTree implements Serializable, Iterable<SolutionNode> {
 				}
 			}
 			if (living)
-				nliving++;
+				;
+			// 	nliving++;
 			else {
-				ndead++;
+			//	ndead++;
 				retireCube(c);
 			}
 		}

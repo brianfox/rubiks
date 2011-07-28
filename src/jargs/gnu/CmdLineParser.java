@@ -33,12 +33,13 @@ import java.util.Locale;
  * @version $Revision: 1.5 $
  * @see jargs.examples.gnu.OptionTest
  */
+@SuppressWarnings("all")
 public class CmdLineParser {
 
     /**
      * Base class for exceptions that may be thrown when options are parsed
      */
-    public static abstract class OptionException extends Exception {
+	public static abstract class OptionException extends Exception {
         OptionException(String msg) { super(msg); }
     }
 

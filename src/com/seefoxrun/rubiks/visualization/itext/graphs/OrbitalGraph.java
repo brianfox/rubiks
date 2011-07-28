@@ -22,16 +22,14 @@ import java.io.IOException;
 
 import com.seefoxrun.rubiks.model.stateful.tree.SolutionNode;
 import com.seefoxrun.rubiks.model.stateful.tree.SolutionTree;
-import com.seefoxrun.rubiks.model.stateful.tree.TreeStatistics;
 import com.seefoxrun.rubiks.visualization.itext.base.Graph;
 import com.seefoxrun.visualization.Document;
 import com.seefoxrun.visualization.Point;
 import com.seefoxrun.visualization.measurement.Units;
-import com.seefoxrun.visualization.measurement.Value;
 
 public class OrbitalGraph extends Graph {
 
-	private TreeStatistics stats;
+	// private TreeStatistics stats;
 	private Point center;
 	Graphics2D g2;
 	
@@ -40,10 +38,10 @@ public class OrbitalGraph extends Graph {
 		g2 = document.getGraphics2D();
 		
 		center = document.center();
-		stats = new TreeStatistics(tree);
+		// stats = new TreeStatistics(tree);
 		
-		Value maxRadius = document.height().compareTo(document.width()) > 0 ? 
-				document.width().div(2) : document.height().div(2);
+		// Value maxRadius = document.height().compareTo(document.width()) > 0 ? 
+		//		document.width().div(2) : document.height().div(2);
 		document.addLayer("Guides");
 		document.addLayer("Wedges");
 		document.addLayer("Connectors");
@@ -102,10 +100,12 @@ public class OrbitalGraph extends Graph {
 			this.connector = parent == null ? null : new OrbitalConnector(parent.location(), this.location);
 		}
 
+		/*
 		private void drawConnector() {
 			if (connector != null)
 				connector.draw();
 		}
+		*/
 
 		@Override
 		public void draw() {

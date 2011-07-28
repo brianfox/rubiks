@@ -267,6 +267,8 @@ public class OptionManager implements Comparable<OptionManager> {
 		return sb.toString();
 	}
 
+	
+	/*
 	private String fromPropertyName(Scope s, OptionType o) {
 		StringBuilder sb = new StringBuilder();
 		if (s.scope != null && s.scope.trim().length() != 0)
@@ -275,6 +277,7 @@ public class OptionManager implements Comparable<OptionManager> {
 		sb.append(o.getClass().getName());
 		return sb.toString();
 	}
+	*/
 
 
 	@Override

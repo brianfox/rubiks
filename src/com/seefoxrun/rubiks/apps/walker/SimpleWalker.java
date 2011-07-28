@@ -37,7 +37,6 @@ import jargs.gnu.CmdLineParser.Option;
 import java.util.TreeSet;
 import java.io.BufferedOutputStream;
 import java.io.DataOutputStream;
-import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -186,6 +185,7 @@ public class SimpleWalker {
 		if (verbose) 
 			System.out.println("Verbose output.");
 
+		/*
 		File dir = new File(System.getProperty("user.dir")); 
 		if (outDir != null) {
 			File ndir = new File(outDir);
@@ -196,6 +196,7 @@ public class SimpleWalker {
 				System.exit(-1);
 			}
 		}
+		*/
 		
 		Report.printHeader(parms);
 		new SimpleWalker(2,parms).process(minlevel, maxlevel);

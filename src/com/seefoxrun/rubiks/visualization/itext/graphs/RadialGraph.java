@@ -203,8 +203,8 @@ public class RadialGraph extends Graph {
 			double x22 = cx + radius2*Math.cos(angle2*Math.PI/180); 
 			double y22 = cy + radius2*Math.sin(angle2*Math.PI/180);
 
-			double x = cx + (radius1+radius2)/2*Math.cos(angle1*Math.PI/180); 
-			double y = cy + (radius1+radius2)/2*Math.sin(angle1*Math.PI/180); 
+			// double x = cx + (radius1+radius2)/2*Math.cos(angle1*Math.PI/180); 
+			// double y = cy + (radius1+radius2)/2*Math.sin(angle1*Math.PI/180); 
 
 			Graphics2D g = document.switchLayer("Wedges");
 			Line2D.Double line1 = new Line2D.Double(x11, y11, x12, y12);
@@ -260,8 +260,8 @@ public class RadialGraph extends Graph {
 			g.draw(e);
 			g.setColor(optionManager.getColor(Defaults.RADIAL_SCOPE, Defaults.NODE_FILL_COLOR));
 			g.fill(e);
-			double x = location.x().convertTo(Units.POINTS);
-			double y = location.y().convertTo(Units.POINTS);
+			// double x = location.x().convertTo(Units.POINTS);
+			// double y = location.y().convertTo(Units.POINTS);
 			
 			/*
 			g.setFont(new Font("Sans-Serif", Font.PLAIN, 12));
