@@ -99,8 +99,6 @@ import com.seefoxrun.matrix.Axis;
 import com.seefoxrun.matrix.Matrix;
 import com.seefoxrun.matrix.TranslationMatrix;
 import com.seefoxrun.rubiks.visualization.itext3d.objects.Object3D;
-import com.seefoxrun.rubiks.visualization.itext3d.objects.Simple;
-import com.seefoxrun.rubiks.visualization.itext3d.objects.paths.Path;
 import com.seefoxrun.visualization.Document;
 import com.seefoxrun.visualization.measurement.Units;
 import com.seefoxrun.visualization.measurement.Value;

@@ -2,9 +2,6 @@ package com.seefoxrun.rubiks.visualization.itext3d.objects;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
-import java.util.ArrayList;
-import java.util.TreeSet;
-
 import com.seefoxrun.matrix.Matrix;
 import com.seefoxrun.rubiks.visualization.itext3d.objects.paths.Path;
 

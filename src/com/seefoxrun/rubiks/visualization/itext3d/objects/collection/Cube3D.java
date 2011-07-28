@@ -43,8 +43,6 @@
 
 package com.seefoxrun.rubiks.visualization.itext3d.objects.collection;
 
-import java.awt.Color;
-
 import com.seefoxrun.matrix.Axis;
 import com.seefoxrun.rubiks.visualization.itext3d.objects.Compound;
 import com.seefoxrun.rubiks.visualization.itext3d.objects.Simple;

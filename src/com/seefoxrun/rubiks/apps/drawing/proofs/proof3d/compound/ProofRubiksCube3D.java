@@ -51,7 +51,6 @@
 
 package com.seefoxrun.rubiks.apps.drawing.proofs.proof3d.compound;
 
-import com.seefoxrun.rubiks.drawing.proofs.LimitedProof3d;
 import com.seefoxrun.rubiks.drawing.proofs.Proof3d;
 import com.seefoxrun.rubiks.visualization.itext3d.objects.collection.RubiksCube3D;
 
