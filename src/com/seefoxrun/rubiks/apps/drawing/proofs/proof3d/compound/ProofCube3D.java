@@ -44,7 +44,7 @@
 
 package com.seefoxrun.rubiks.apps.drawing.proofs.proof3d.compound;
 
-import com.seefoxrun.rubiks.apps.drawing.proofs.proof3d.PathProof3d;
+import com.seefoxrun.rubiks.drawing.proofs.PathProof3d;
 import com.seefoxrun.rubiks.visualization.itext3d.objects.collection.Cube3D;
 
 public class ProofCube3D extends PathProof3d {

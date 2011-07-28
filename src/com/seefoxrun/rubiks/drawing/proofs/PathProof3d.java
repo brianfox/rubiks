@@ -62,7 +62,7 @@
 */
 
 
-package com.seefoxrun.rubiks.apps.drawing.proofs.proof3d;
+package com.seefoxrun.rubiks.drawing.proofs;
 
 import com.seefoxrun.rubiks.visualization.itext3d.objects.Simple;
 import com.seefoxrun.rubiks.visualization.itext3d.objects.paths.Path;

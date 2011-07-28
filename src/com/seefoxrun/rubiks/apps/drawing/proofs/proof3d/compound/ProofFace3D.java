@@ -37,7 +37,7 @@ package com.seefoxrun.rubiks.apps.drawing.proofs.proof3d.compound;
 
 import java.awt.Color;
 
-import com.seefoxrun.rubiks.apps.drawing.proofs.proof3d.Proof3d;
+import com.seefoxrun.rubiks.drawing.proofs.Proof3d;
 import com.seefoxrun.rubiks.visualization.itext3d.objects.collection.Face3D;
 
 public class ProofFace3D extends Proof3d {

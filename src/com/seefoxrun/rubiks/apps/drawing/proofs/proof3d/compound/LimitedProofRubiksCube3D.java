@@ -51,8 +51,8 @@
 
 package com.seefoxrun.rubiks.apps.drawing.proofs.proof3d.compound;
 
-import com.seefoxrun.rubiks.apps.drawing.proofs.proof3d.LimitedProof3d;
-import com.seefoxrun.rubiks.apps.drawing.proofs.proof3d.Proof3d;
+import com.seefoxrun.rubiks.drawing.proofs.LimitedProof3d;
+import com.seefoxrun.rubiks.drawing.proofs.Proof3d;
 import com.seefoxrun.rubiks.visualization.itext3d.objects.collection.RubiksCube3D;
 
 public class LimitedProofRubiksCube3D extends LimitedProof3d {

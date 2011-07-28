@@ -1,23 +1,17 @@
 /*
- * $Id: LimitedProof3d.java,v 1.5 2010/08/25 21:06:36 bfox Exp $
+ * $Id: Proof3d.java,v 1.14 2010/08/25 21:06:36 bfox Exp $
  * @Copyright@
  * @Copyright@ 
  * 
- * $Log: LimitedProof3d.java,v $
- * Revision 1.5  2010/08/25 21:06:36  bfox
+ * $Log: Proof3d.java,v $
+ * Revision 1.14  2010/08/25 21:06:36  bfox
  * Solved the perspective issue.  The problem: normalize w.
  *
- * Revision 1.4  2010/08/24 21:25:08  bfox
+ * Revision 1.13  2010/08/24 18:35:24  bfox
  * Playing around with perspective.
  *
- * Revision 1.3  2010/08/24 18:35:24  bfox
- * Playing around with perspective.
- *
- * Revision 1.2  2010/08/23 23:12:47  bfox
+ * Revision 1.12  2010/08/23 23:12:47  bfox
  * Think I finally found the pesky ordering problem.  It was related to centering corrections to the face as a whole, not the individual labels.
- *
- * Revision 1.1  2010/08/20 23:35:19  bfox
- * Dear diary...
  *
  * Revision 1.11  2010/07/29 22:07:32  bfox
  * Sanity check.  Why is Eclipse showing these files changed?
@@ -83,10 +77,11 @@
 */
 
 
-package com.seefoxrun.rubiks.apps.drawing.proofs.proof3d;
+package com.seefoxrun.rubiks.drawing.proofs;
 
 import java.awt.Color;
 import java.awt.Desktop;
+import java.awt.Font;
 import java.awt.Graphics2D;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -107,8 +102,28 @@ import com.seefoxrun.visualization.measurement.Value;
 import com.seefoxrun.visualization.medium.Border;
 import com.seefoxrun.visualization.medium.Page;
 
-public abstract class LimitedProof3d {
+public abstract class Proof3d {
 
+	public static Font smallFont = new Font("Serif", Font.ITALIC, 6);
+	public static Font largeFont = new Font("Serif", Font.PLAIN, 12);
+
+	private static Matrix perspective;
+	private static Matrix move;
+	private static Matrix projection;
+	
+	static {
+		perspective = new Matrix(
+				new double[][]{
+						{1,0,0,0},
+						{0,1,0,0},
+						{0,0,1,0},
+						{0,0,0.01,1}
+						});
+		move = new TranslationMatrix(0,0,-20);
+		projection = perspective.multiply(move);
+	}
+	
+	
 	public void createProof(Object3D o) {
 		String filename="test.pdf";
 		Document doc = openDocument(filename);
@@ -117,34 +132,117 @@ public abstract class LimitedProof3d {
 		g.setColor(Color.black);
 		g.fillRect(0, 0, 5000, 5000);
 		g.setBackground(Color.black);
-
 		
-		double scale = 200;
+		int step = 40;
+		int count = 12;
+		double scale = 13;
+		double rot = 10;
+		
+		rot = 180 / count;
 		
 		o.scale(scale,scale,scale, getClass().getSimpleName() + " testing.  Visibility scale.");
 
-		g.translate((int)doc.width().convertTo(Units.POINTS)/2, (int)doc.height().convertTo(Units.POINTS)/2);
-		for (int i=0; i < 7; i++) {
-			o.rotateDeg(Axis.X, 15, getClass().getSimpleName() + ": Testing x-axis rotation.");
-			o.rotateDeg(Axis.Y, 15, getClass().getSimpleName() + ": Testing Y-axis rotation.");
-		}
+		
+		g.translate(step,step);
+		
+		processSimpleAxis(g, step, rot, count, Axis.X, o);
+		processSimpleAxis(g, step, rot, count, Axis.Y, o);
+		processSimpleAxis(g, step, rot, count, Axis.Z, o);
 
-		Matrix perspective = new Matrix(
-				new double[][]{
-						{1,0,0,0},
-						{0,1,0,0},
-						{0,0,1,0},
-						{0,0,0.001,1}
-						});
-		Matrix move = new TranslationMatrix(0,0,-4);
-		Matrix projection = perspective.multiply(move);
+		processComplexAxis(g, step, rot, count, Axis.X, Axis.Y, o);
+		processComplexAxis(g, step, rot, count, Axis.X, Axis.Z, o);
 		
-		o.draw(g, projection);
-		
+
 		doc.close();
 		launchDocument(filename);
 	}
 
+	
+	private void processComplexAxis(Graphics2D g, int step, double rot, int count, Axis axis1, Axis axis2, Object3D o) {
+		System.out.printf("%n%nRotation about the x-axis, y-axis:%n");
+
+		for (int i=0; i < count; i++) {
+			o.draw(g, projection);
+			drawRotationLabel(g,step, String.format("%3.1f",i*1.0*rot));
+			rotate(o, axis1, rot);
+			rotate(o, axis2, rot);
+			g.translate(step,0);
+		}
+		
+		g.translate(-step*count,step);
+		
+		for (int i=0; i < count; i++) {
+			rotate(o, axis2, -rot);
+			rotate(o, axis1, -rot);
+			o.draw(g, projection);
+			drawRotationLabel(g,step, String.format("%3.1f",(count + i)*rot*1.0));
+			g.translate(step,0);
+		}
+
+		
+		g.translate(0,-step/2);
+		g.setFont(largeFont);
+		g.setColor(new Color(0xCC,0xCC,0xCC));
+		g.drawString("Rotation about " + axis1.toString() + "," + axis2.toString() + " axis",0,0);
+		g.translate(0,step/2);
+
+		g.translate(-step*count,step*1.5);
+
+	}
+
+
+
+
+	private void processSimpleAxis(Graphics2D g, double step, double rot, double count, Axis axis, Object3D o) {
+
+		System.out.printf("Object Description:%n%n%s%n", o.toString());
+		System.out.printf("%n%nRotation about the x-axis:%n");
+
+		
+		for (int i=0; i < count; i++) {
+			o.draw(g, projection);
+			drawRotationLabel(g,step, String.format("%3.1f",i*1.0*rot));
+			rotate(o, axis, rot);
+			g.translate(step,0);
+		}
+		g.translate(-step*count,step);
+		for (int i=0; i < count; i++) {
+			o.draw(g, projection);
+			drawRotationLabel(g, step, String.format("%3.1f",(count + i)*rot*1.0));
+			rotate(o, axis, rot);
+			g.translate(step,0);
+		}
+		drawSimpleLabel(g, axis, step, rot, count);
+		g.translate(-step*count, 1.5 * step);
+
+	}
+
+	private void drawSimpleLabel(Graphics2D g, Axis axis, double step, double rot, double count) {
+		String label = "Rotation about the " + axis.toString() + " axis";
+		g.translate(0,-step/2);
+		g.setFont(largeFont);
+		g.setColor(new Color(0xCC,0xCC,0xCC));
+		
+		g.drawString(label, 0, 0);
+		g.translate(0,step/2);
+	}
+	
+	private void rotate(Object3D o, Axis axis, double rot) {
+		o.rotateDeg(
+				axis, 
+				rot, 
+				getClass().getSimpleName() 
+				+ String.format("Testing %s rotation.", axis.toString())
+				);
+	}
+	
+	private void drawRotationLabel(Graphics2D g, double step, String s) {
+		g.translate(0,step/2);
+		g.setColor(new Color(0x88,0x88,0x88));
+		g.setFont(smallFont);
+		g.drawString(s,0,0);
+		g.translate(0,-step/2);
+	}
 
 	private static Document openDocument(String filename) {
 		Border border = new Border(

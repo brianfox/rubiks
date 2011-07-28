@@ -19,7 +19,7 @@
 
 package com.seefoxrun.rubiks.apps.drawing.proofs.proof3d.path;
 
-import com.seefoxrun.rubiks.apps.drawing.proofs.proof3d.PathProof3d;
+import com.seefoxrun.rubiks.drawing.proofs.PathProof3d;
 import com.seefoxrun.rubiks.visualization.itext3d.objects.paths.collection.RoundedRectangle;
 
 public class ProofRoundedRectangle extends PathProof3d {
