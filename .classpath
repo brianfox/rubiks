@@ -10,5 +10,8 @@
 			<attribute name="javadoc_location" value="jar:platform:/resource/rubiks/lib/itext/itext-xtra-5.1.1-javadoc.jar!/"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="lib/logback/logback-classic-0.9.29.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="lib/logback/logback-core-0.9.29.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
