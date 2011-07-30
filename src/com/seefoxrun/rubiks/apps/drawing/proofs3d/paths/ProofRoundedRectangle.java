@@ -17,15 +17,15 @@
 */
 
 
-package com.seefoxrun.rubiks.apps.drawing.proofs.proof3d.path;
+package com.seefoxrun.rubiks.apps.drawing.proofs3d.paths;
 
-import com.seefoxrun.rubiks.drawing.proofs.PathProof3d;
+import com.seefoxrun.rubiks.apps.drawing.proofs3d.PathProof;
 import com.seefoxrun.rubiks.visualization.itext3d.objects.paths.collection.RoundedRectangle;
 
-public class ProofRoundedRectangle extends PathProof3d {
+public class ProofRoundedRectangle extends PathProof {
 
 	public static void main(String[] args) {
-        PathProof3d proof = new ProofRoundedRectangle();
+        PathProof proof = new ProofRoundedRectangle();
 		proof.createProof(new RoundedRectangle(0.3));
 	}
 

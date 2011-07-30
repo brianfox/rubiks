@@ -1,23 +1,3 @@
-/*
- * $Id: Dir.java,v 1.1 2010/01/01 08:28:44 bfox Exp $
- * @Copyright@
- * @Copyright@ 
- * 
- * $Log: Dir.java,v $
- * Revision 1.1  2010/01/01 08:28:44  bfox
- * Rearranged packages.
- *
- * Revision 1.4  2009/03/18 23:07:29  bfox
- * Broken spatial cube routine.  Searching for clues in previous commits.
- *
- * Revision 1.3  2009/03/02 19:13:03  bfox
- * *** empty log message ***
- *
- * Revision 1.2  2008/10/27 15:50:39  bfox
- * Added copyright and cvs logging.
- *
- */
-
 package com.seefoxrun.rubiks.model.cube;
 
 public enum Dir {

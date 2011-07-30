@@ -1,16 +1,3 @@
-/*
- * $Id: CubeDrawing.java,v 1.2 2010/03/10 23:04:21 bfox Exp $
- * @Copyright@
- * @Copyright@ 
- * 
- * $Log: CubeDrawing.java,v $
- * Revision 1.2  2010/03/10 23:04:21  bfox
- * Added cvs logging.
- *
- *
-*/
-
-
 package com.seefoxrun.rubiks.visualization.itext.base;
 
 import java.awt.BasicStroke;

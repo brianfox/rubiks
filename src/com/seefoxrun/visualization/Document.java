@@ -1,16 +1,3 @@
-/*
- * $Id: Document.java,v 1.7 2010/03/10 23:04:21 bfox Exp $
- * @Copyright@
- * @Copyright@ 
- * 
- * $Log: Document.java,v $
- * Revision 1.7  2010/03/10 23:04:21  bfox
- * Added cvs logging.
- *
- *
-*/
-
-
 package com.seefoxrun.visualization;
 
 import java.awt.Graphics2D;

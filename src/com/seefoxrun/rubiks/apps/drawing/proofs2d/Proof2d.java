@@ -1,30 +1,4 @@
-/*
- * $Id: Proof2d.java,v 1.2 2010/05/28 22:31:56 bfox Exp $
- * @Copyright@
- * @Copyright@ 
- * 
- * $Log: Proof2d.java,v $
- * Revision 1.2  2010/05/28 22:31:56  bfox
- * Code cleanup - removed unnecessary imports.
- *
- * Revision 1.1  2010/05/13 00:48:15  bfox
- * Returned to Matrix 3d graphics with a vengeance.  Finally feel
- * this design is working out.
- *
- * Revision 1.3  2010/04/14 18:03:43  bfox
- * Backed out Matrix algebra for 3D rendering.
- *
- * Revision 1.1  2010/03/20 17:30:33  bfox
- * Relocated from testbed.  Renamed consistently.
- *
- * Revision 1.2  2010/03/10 23:00:48  bfox
- * Added cvs logging.
- *
- *
-*/
-
-
-package com.seefoxrun.rubiks.apps.drawing.proofs.proof2d;
+package com.seefoxrun.rubiks.apps.drawing.proofs2d;
 
 import java.awt.BasicStroke;
 import java.awt.Color;

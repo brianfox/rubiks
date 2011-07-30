@@ -1,10 +1,3 @@
-/*
- * $Id: Object3D.java,v 1.11 2010/08/24 00:31:13 bfox Exp $
- * @Copyright@
- * @Copyright@ 
- * 
- *
-*/
 package com.seefoxrun.rubiks.visualization.itext3d.objects;
 
 import java.awt.BasicStroke;

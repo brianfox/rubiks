@@ -1,19 +1,3 @@
-/*
- * $Id: GraphicalOptionManager.java,v 1.6 2010/05/28 22:31:56 bfox Exp $
- * @Copyright@
- * @Copyright@ 
- * 
- * $Log: GraphicalOptionManager.java,v $
- * Revision 1.6  2010/05/28 22:31:56  bfox
- * Code cleanup - removed unnecessary imports.
- *
- * Revision 1.5  2010/03/10 23:04:22  bfox
- * Added cvs logging.
- *
- *
-*/
-
-
 package com.seefoxrun.rubiks.visualization.itext.options;
 
 import java.awt.Color;

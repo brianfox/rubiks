@@ -49,15 +49,15 @@
 */
 
 
-package com.seefoxrun.rubiks.apps.drawing.proofs.proof3d.compound;
+package com.seefoxrun.rubiks.apps.drawing.proofs3d.objects;
 
-import com.seefoxrun.rubiks.drawing.proofs.Proof3d;
+import com.seefoxrun.rubiks.apps.drawing.proofs3d.ObjectProof;
 import com.seefoxrun.rubiks.visualization.itext3d.objects.collection.RubiksCube3D;
 
-public class ProofRubiksCube3D extends Proof3d {
+public class ProofRubiksCube extends ObjectProof {
 
 	public static void main(String[] args) {
-        Proof3d proof = new ProofRubiksCube3D();
+        ObjectProof proof = new ProofRubiksCube();
         RubiksCube3D obj = new RubiksCube3D(5);
 		proof.createProof(obj);
 	}

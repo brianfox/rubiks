@@ -1,16 +1,3 @@
-/*
- * $Id: TreeStatistics.java,v 1.6 2010/03/10 23:04:22 bfox Exp $
- * @Copyright@
- * @Copyright@ 
- * 
- * $Log: TreeStatistics.java,v $
- * Revision 1.6  2010/03/10 23:04:22  bfox
- * Added cvs logging.
- *
- *
-*/
-
-
 package com.seefoxrun.rubiks.model.stateful.tree;
 
 import java.util.ArrayList;

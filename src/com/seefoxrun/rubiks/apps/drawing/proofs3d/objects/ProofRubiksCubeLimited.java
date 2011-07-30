@@ -1,16 +1,23 @@
 /*
- * $Log: ProofCube3D.java,v $
- * Revision 1.7  2010/07/29 22:07:31  bfox
- * Sanity check.  Why is Eclipse showing these files changed?
+ * $Log: LimitedProofRubiksCube3D.java,v $
+ * Revision 1.1  2010/08/23 23:12:48  bfox
+ * Think I finally found the pesky ordering problem.  It was related to centering corrections to the face as a whole, not the individual labels.
  *
- * Revision 1.6  2010/06/22 16:27:40  bfox
+ * Revision 1.5  2010/08/20 23:35:19  bfox
+ * Dear diary...
+ *
+ * Revision 1.4  2010/07/06 22:32:41  bfox
+ * Still working on 3d cube drawings.
+ * Somewhat stable now.
+ *
+ * Revision 1.3  2010/06/22 16:27:40  bfox
  * Cleaned up compound.
  *
- * Revision 1.5  2010/06/22 15:32:14  bfox
+ * Revision 1.2  2010/06/22 15:32:14  bfox
  * Refactored package locations to be a little more intuitive.
  * Added "bounding boxes" to help in debugging.
  *
- * Revision 1.4  2010/06/17 16:11:05  bfox
+ * Revision 1.1  2010/06/17 16:11:05  bfox
  * Still working on 3d cube drawings.
  *
  * Revision 1.3  2010/06/11 23:33:49  bfox
@@ -42,16 +49,16 @@
 */
 
 
-package com.seefoxrun.rubiks.apps.drawing.proofs.proof3d.compound;
+package com.seefoxrun.rubiks.apps.drawing.proofs3d.objects;
 
-import com.seefoxrun.rubiks.drawing.proofs.PathProof3d;
-import com.seefoxrun.rubiks.visualization.itext3d.objects.collection.Cube3D;
+import com.seefoxrun.rubiks.apps.drawing.proofs3d.LimitedProof;
+import com.seefoxrun.rubiks.visualization.itext3d.objects.collection.RubiksCube3D;
 
-public class ProofCube3D extends PathProof3d {
+public class ProofRubiksCubeLimited extends LimitedProof {
 
 	public static void main(String[] args) {
-        PathProof3d proof = new ProofCube3D();
-        Cube3D obj = new Cube3D();
+        LimitedProof proof = new ProofRubiksCubeLimited();
+        RubiksCube3D obj = new RubiksCube3D(5);
 		proof.createProof(obj);
 	}
 

@@ -1,16 +1,3 @@
-/*
- * $Id: OptionColorMap.java,v 1.4 2010/03/10 23:04:22 bfox Exp $
- * @Copyright@
- * @Copyright@ 
- * 
- * $Log: OptionColorMap.java,v $
- * Revision 1.4  2010/03/10 23:04:22  bfox
- * Added cvs logging.
- *
- *
-*/
-
-
 package com.seefoxrun.rubiks.visualization.itext.options;
 
 import com.seefoxrun.options.OptionType;

@@ -14,15 +14,15 @@
 */
 
 
-package com.seefoxrun.rubiks.apps.drawing.proofs.proof3d.path;
+package com.seefoxrun.rubiks.apps.drawing.proofs3d.paths;
 
-import com.seefoxrun.rubiks.drawing.proofs.PathProof3d;
+import com.seefoxrun.rubiks.apps.drawing.proofs3d.PathProof;
 import com.seefoxrun.rubiks.visualization.itext3d.objects.paths.collection.Ring;
 
-public class ProofRing extends PathProof3d {
+public class ProofRing extends PathProof {
 
 	public static void main(String[] args) {
-        PathProof3d proof = new ProofRing();
+        PathProof proof = new ProofRing();
 		proof.createProof(new Ring(0.3));
 	}
 

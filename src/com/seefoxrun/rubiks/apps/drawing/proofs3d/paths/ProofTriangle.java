@@ -1,12 +1,12 @@
-package com.seefoxrun.rubiks.apps.drawing.proofs.proof3d.path;
+package com.seefoxrun.rubiks.apps.drawing.proofs3d.paths;
 
-import com.seefoxrun.rubiks.drawing.proofs.PathProof3d;
+import com.seefoxrun.rubiks.apps.drawing.proofs3d.PathProof;
 import com.seefoxrun.rubiks.visualization.itext3d.objects.paths.collection.Triangle;
 
-public class ProofTriangle extends PathProof3d {
+public class ProofTriangle extends PathProof {
 
 	public static void main(String[] args) {
-        PathProof3d proof = new ProofTriangle();
+        PathProof proof = new ProofTriangle();
 		proof.createProof(
 				new Triangle(
 						0,0,0,

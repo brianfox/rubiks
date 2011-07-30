@@ -1,35 +1,3 @@
-/*
- * $Id: SimpleWalker.java,v 1.9 2010/02/12 14:44:25 bfox Exp $
- * @Copyright@
- * @Copyright@ 
- * 
- * $Log: SimpleWalker.java,v $
- * Revision 1.9  2010/02/12 14:44:25  bfox
- * *** empty log message ***
- *
- * Revision 1.8  2010/02/08 18:21:14  bfox
- * *** empty log message ***
- *
- * Revision 1.7  2010/02/01 16:43:54  bfox
- * *** empty log message ***
- *
- * Revision 1.6  2010/01/25 16:44:33  bfox
- * Restructuring Options
- *
- * Revision 1.5  2010/01/15 18:42:47  bfox
- * Solidified command line switches.
- * Oh, and the serialization broke.  DOH!
- *
- * Revision 1.4  2010/01/14 23:16:10  bfox
- * Boiled down SolutionTree and SolutionNode.  SolutionNode
- * should be extendable now such that GraphNode and
- * derivatives do not need to duplicate its functionality.
- *
- * Revision 1.3  2010/01/08 03:05:26  bfox
- * *** empty log message ***
- *
- */
-
 package com.seefoxrun.rubiks.apps.walker;
 import jargs.gnu.CmdLineParser;
 import jargs.gnu.CmdLineParser.Option;

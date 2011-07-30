@@ -1,19 +1,3 @@
-/*
- * $Id: OrbitalGraph.java,v 1.3 2010/05/28 22:31:56 bfox Exp $
- * @Copyright@
- * @Copyright@ 
- * 
- * $Log: OrbitalGraph.java,v $
- * Revision 1.3  2010/05/28 22:31:56  bfox
- * Code cleanup - removed unnecessary imports.
- *
- * Revision 1.2  2010/03/10 23:04:22  bfox
- * Added cvs logging.
- *
- *
-*/
-
-
 package com.seefoxrun.rubiks.visualization.itext.graphs;
 
 import java.awt.Color;

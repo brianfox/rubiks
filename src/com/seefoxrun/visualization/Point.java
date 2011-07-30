@@ -1,16 +1,3 @@
-/*
- * $Id: Point.java,v 1.2 2010/03/10 23:04:21 bfox Exp $
- * @Copyright@
- * @Copyright@ 
- * 
- * $Log: Point.java,v $
- * Revision 1.2  2010/03/10 23:04:21  bfox
- * Added cvs logging.
- *
- *
-*/
-
-
 package com.seefoxrun.visualization;
 
 import com.seefoxrun.visualization.measurement.Units;

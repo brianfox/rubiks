@@ -33,17 +33,17 @@
 */
 
 
-package com.seefoxrun.rubiks.apps.drawing.proofs.proof3d.compound;
+package com.seefoxrun.rubiks.apps.drawing.proofs3d.objects;
 
 import java.awt.Color;
 
-import com.seefoxrun.rubiks.drawing.proofs.Proof3d;
+import com.seefoxrun.rubiks.apps.drawing.proofs3d.ObjectProof;
 import com.seefoxrun.rubiks.visualization.itext3d.objects.collection.Face3D;
 
-public class ProofFace3D extends Proof3d {
+public class ProofFace extends ObjectProof {
 
 	public static void main(String[] args) {
-        Proof3d proof = new ProofFace3D();
+        ObjectProof proof = new ProofFace();
         Face3D obj = new Face3D(5);
         obj.paintTestPattern(Color.red);
 		proof.createProof(obj);

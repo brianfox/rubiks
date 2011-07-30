@@ -1,16 +1,3 @@
-/*
- * $Id: OptionValue.java,v 1.3 2010/03/10 23:04:22 bfox Exp $
- * @Copyright@
- * @Copyright@ 
- * 
- * $Log: OptionValue.java,v $
- * Revision 1.3  2010/03/10 23:04:22  bfox
- * Added cvs logging.
- *
- *
-*/
-
-
 package com.seefoxrun.rubiks.visualization.itext.options;
 
 import com.seefoxrun.options.OptionType;

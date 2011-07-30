@@ -23,15 +23,15 @@
 */
 
 
-package com.seefoxrun.rubiks.apps.drawing.proofs.proof3d.path;
+package com.seefoxrun.rubiks.apps.drawing.proofs3d.paths;
 
-import com.seefoxrun.rubiks.drawing.proofs.PathProof3d;
+import com.seefoxrun.rubiks.apps.drawing.proofs3d.PathProof;
 import com.seefoxrun.rubiks.visualization.itext3d.objects.paths.collection.ArcArrow;
 
-public class ProofArcArrow extends PathProof3d {
+public class ProofArcArrow extends PathProof {
 
 	public static void main(String[] args) {
-        PathProof3d proof = new ProofArcArrow();
+        PathProof proof = new ProofArcArrow();
 		proof.createProof(new ArcArrow(0.3,2.5,0.5,0.6));
 	}
 
