@@ -88,24 +88,24 @@ public class Map1x1Cube {
 	
 	
 	static ArrayList<Integer> visited = new ArrayList<Integer>();
-	static ArrayList<Association> directed = new ArrayList<Association>(); 
-	static ArrayList<Association> undirected = new ArrayList<Association>(); 
+	static ArrayList<Association> complex = new ArrayList<Association>(); 
+	static ArrayList<Association> simple = new ArrayList<Association>(); 
 	
 	public static void main(String[] args) {
 		recurse(0);
 
-		System.out.println("DIRECTED GRAPH");
+		System.out.println("COMPLEX GRAPH");
 		System.out.println("--------------");
-		for (Association a : directed) 
+		for (Association a : complex) 
 			System.out.println(a);
-		System.out.println("Total:  " + directed.size());
+		System.out.println("Total:  " + complex.size());
 		System.out.println("\n\n\n");
 
-		System.out.println("UNDIRECTED GRAPH");
+		System.out.println("SIMPLE GRAPH");
 		System.out.println("----------------");
-		for (Association a : undirected) 
+		for (Association a : simple) 
 			System.out.println(a);
-		System.out.println("Total:  " + undirected.size());
+		System.out.println("Total:  " + simple.size());
 		System.out.println("\n\n\n");
 }
 	
@@ -119,9 +119,9 @@ public class Map1x1Cube {
 			for (Dir d : Dir.values()) {
 				int next = Piece.PIECE_ROTATE_FACEDIRPIECE[f.ordinal()][d.ordinal()][cube];
 				Association a = new Association(cube, f, d, next);
-				if (!undirected.contains(a))
-					undirected.add(a);
-				directed.add(a);
+				if (!simple.contains(a))
+					simple.add(a);
+				complex.add(a);
 				todo.add(next);
 			}
 		}
