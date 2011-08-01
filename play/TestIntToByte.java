@@ -1,4 +1,4 @@
-package com.seefoxrun.rubiks.apps.tools;
+
 
 import com.seefoxrun.util.ArrayUtil;
 

@@ -1,4 +1,4 @@
-package com.seefoxrun.rubiks.apps.tools;
+
 
 public class MemWatch {
 
