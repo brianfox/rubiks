@@ -52,7 +52,8 @@ public class Piece implements Comparable<Piece> {
 			}
 		}
 	}
-    public final static char[] FACECOLORS_FACE = new char[] { 
+
+	public final static char[] FACECOLORS_FACE = new char[] { 
 		'R',	// front  // red 
 		'Y', 	// right  // yellow
 		'B', 	// top    // blue
@@ -60,7 +61,6 @@ public class Piece implements Comparable<Piece> {
 		'W', 	// left   // white
 		'O' 	// back   // orange
 	};
-
     
     public final static Color[] AWTCOLOR_FACE = new Color[] {
     	new Color(0x99,0x00,0x00), // red 
