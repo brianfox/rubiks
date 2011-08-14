@@ -53,8 +53,8 @@ public class SameFaceLoops {
 		@Override
 		public String toString() {
 			int end = Piece.PIECE_ROTATE_FACEDIRPIECE[f.val()][d.val()][start];
-  	        // return String.format("%s @ %s%s -> %s",  getLabels(start), f, d, getLabels(end));
-  	        return String.format("%s ",  getLabels(start), f, d, getLabels(end));
+  	        return String.format("%s @ %s%s -> %s",  getLabels(start), f, d, getLabels(end));
+  	        // return String.format("%s ",  getLabels(start), f, d, getLabels(end));
 		}
 	}
 	
@@ -102,7 +102,7 @@ public class SameFaceLoops {
 	}
 
 	static void discoverPaths(ArrayList<Path> paths, TreeSet<Move> repeats, int cube) {
-		for (Face f : new Face[] {Face.FRONT, Face.RIGHT, Face.TOP, Face.LEFT, Face.BOTTOM, Face.BACK}) {
+		for (Face f : new Face[] {Face.FRONT, Face.RIGHT, Face.TOP}) { // , Face.LEFT, Face.BOTTOM, Face.BACK}) {
 			for (Dir d : new Dir[] {Dir.CW}) {
 				Move repeattest = new Move(cube, f, d);
 				if (repeats.contains(repeattest)) {
