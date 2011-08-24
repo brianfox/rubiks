@@ -4,8 +4,8 @@ import java.awt.Color;
 import java.awt.Graphics2D;
 import java.io.IOException;
 
-import com.seefoxrun.rubiks.model.stateful.tree.SolutionNode;
-import com.seefoxrun.rubiks.model.stateful.tree.SolutionTree;
+import com.seefoxrun.rubiks.model.stateful.tree.original.SolutionNode;
+import com.seefoxrun.rubiks.model.stateful.tree.original.SolutionTree;
 import com.seefoxrun.rubiks.visualization.itext.base.Graph;
 import com.seefoxrun.visualization.Document;
 import com.seefoxrun.visualization.Point;

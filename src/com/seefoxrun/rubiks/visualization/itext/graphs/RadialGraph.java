@@ -10,9 +10,9 @@ import java.io.IOException;
 import java.util.HashMap;
 
 import com.seefoxrun.rubiks.model.operators.Twist;
-import com.seefoxrun.rubiks.model.stateful.tree.SolutionNode;
-import com.seefoxrun.rubiks.model.stateful.tree.SolutionTree;
-import com.seefoxrun.rubiks.model.stateful.tree.TreeStatistics;
+import com.seefoxrun.rubiks.model.stateful.tree.original.SolutionNode;
+import com.seefoxrun.rubiks.model.stateful.tree.original.SolutionTree;
+import com.seefoxrun.rubiks.model.stateful.tree.original.TreeStatistics;
 import com.seefoxrun.rubiks.visualization.itext.base.CubeDrawing;
 import com.seefoxrun.rubiks.visualization.itext.base.Graph;
 import com.seefoxrun.rubiks.visualization.itext.options.Defaults;

@@ -34,6 +34,9 @@ public abstract class Cube implements Comparable<Cube>, Cloneable, Serializable 
 	abstract public int countSlices(Face face);
 	abstract protected byte[][] getFacePieces(Face face);
 	abstract protected byte[][] getLoopPieces(Face face, int slice);
+	
+	abstract protected int indexSize();
+	abstract protected int indexGroup();
 
 	
 	

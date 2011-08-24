@@ -4,29 +4,6 @@ class Cube2 extends Cube {
 
 	private static final long serialVersionUID = 1L;
 	
-	/* From wikipedia:
-	   
-	   The number f of positions that require n full twists and 
-	   number q of positions that require n quarter turn twists are:
-	  
-			n 	f 		q
-			0 	1 		1
-			1 	9 		6
-			2 	54 		27
-			3 	321 	120
-			4 	1847 	534
-			5 	9992 	2256
-			6 	50136 	8969
-			7 	227536 	33058
-			8 	870072 	114149
-			9 	1887748 360508
-			10 	623800 	930588
-			11 	2644 	1350852
-			12 			782536
-			13 			90280
-			14 			276
-	
-	*/
 	/*
 	 * Cube Mapping 
 	 * ------------ 
@@ -112,6 +89,16 @@ class Cube2 extends Cube {
 
 	protected byte[][] getFacePieces(Face face) {
 		return faces[face.val()];
+	}
+
+	@Override
+	protected int indexGroup() {
+		return pieces[0];
+	}
+
+	@Override
+	protected int indexSize() {
+		return 256;
 	}
 	
 }

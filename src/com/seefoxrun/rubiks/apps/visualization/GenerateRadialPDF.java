@@ -11,7 +11,7 @@ import java.io.File;
 import com.itextpdf.text.DocumentException;
 
 import com.seefoxrun.options.OptionException;
-import com.seefoxrun.rubiks.model.stateful.tree.SolutionTree;
+import com.seefoxrun.rubiks.model.stateful.tree.original.SolutionTree;
 import com.seefoxrun.rubiks.serialization.SerializationException;
 import com.seefoxrun.rubiks.visualization.itext.graphs.RadialGraph;
 import com.seefoxrun.rubiks.visualization.itext.options.Defaults;

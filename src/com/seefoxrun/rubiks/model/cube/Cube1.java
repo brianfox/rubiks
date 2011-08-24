@@ -68,4 +68,14 @@ class Cube1 extends Cube {
 		return loops[face.val()].length;
 	}
 
+	@Override
+	protected int indexGroup() {
+		return 0;
+	}
+
+	@Override
+	protected int indexSize() {
+		return 1;
+	}
+
 }

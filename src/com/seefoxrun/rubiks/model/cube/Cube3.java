@@ -113,4 +113,14 @@ class Cube3 extends Cube {
 		return faces[face.val()];
 	}
 
+	@Override
+	protected int indexGroup() {
+		return pieces[0];
+	}
+
+	@Override
+	protected int indexSize() {
+		return 256;
+	}
+
 }
