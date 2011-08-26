@@ -34,6 +34,8 @@ public class SolutionTree {
 	}
 	
 	public AdvancementStats advanceTree() {
+		
+		long start = System.nanoTime();
 
 		ArrayList<SolutionNode> discovered = new ArrayList<SolutionNode>();
 		depth++;
@@ -45,6 +47,7 @@ public class SolutionTree {
 			for (Face f : Face.values()) {
 				for (Dir d : Dir.values()) {
 					for (int s=0; s < c.countSlices(f); s++) {
+						twists++;
 						Cube candidate = c.twist(f, d, s);
 						SolutionNode ncandidate = new SolutionNode(candidate);
 						if (stored.add(ncandidate)) 
@@ -56,8 +59,10 @@ public class SolutionTree {
 		}
 		
 		vestal = discovered;
-		
-		return new AdvancementStats(depth, twists, vestal.size(), twists - vestal.size(), 0);
+
+		long end = System.nanoTime();
+
+		return new AdvancementStats(depth, twists, vestal.size(), twists - vestal.size(), end-start);
 	}
 	
 	@Override 
