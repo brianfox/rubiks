@@ -6,9 +6,9 @@ public class AdvancementStats {
 	int totalTwists;
 	int kept;
 	int discarded;
-	float time;
+	long time;
 	
-	public AdvancementStats(int level, int totalTwists, int kept, int discarded, float time) {
+	public AdvancementStats(int level, int totalTwists, int kept, int discarded, long time) {
 		this.level = level;
 		this.totalTwists = totalTwists;
 		this.kept = kept;
@@ -23,7 +23,7 @@ public class AdvancementStats {
 				totalTwists,
 				kept,
 				discarded,
-				time
+				time/1000000000.0
 		);
 	}
 }
