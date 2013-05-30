@@ -27,6 +27,7 @@ public class OptionBoolean implements OptionType {
 		return Boolean.toString(b);
 	}
 	
+	@Override
 	public Boolean getValue() {
 		return b;
 	}

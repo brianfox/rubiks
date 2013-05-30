@@ -5,7 +5,6 @@ import java.awt.geom.Ellipse2D;
 import com.itextpdf.text.BaseColor;
 
 import com.seefoxrun.options.OptionManager;
-import com.seefoxrun.rubiks.model.stateful.tree.*;
 import com.seefoxrun.rubiks.model.stateful.tree.original.SolutionNode;
 import com.seefoxrun.rubiks.model.stateful.tree.original.SolutionTree;
 import com.seefoxrun.visualization.Document;

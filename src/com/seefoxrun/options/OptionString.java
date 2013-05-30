@@ -22,6 +22,7 @@ public class OptionString implements OptionType {
 		return s;
 	}
 
+	@Override
 	public String getValue() {
 		return s;
 	}

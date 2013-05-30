@@ -29,6 +29,7 @@ public class Point {
 		return y;
 	}
 
+	@Override
 	public String toString() {
 		return String.format("[%2.3f %2.3f]", x, y);
 	}

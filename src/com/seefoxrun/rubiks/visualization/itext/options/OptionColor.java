@@ -44,6 +44,7 @@ public class OptionColor implements OptionType {
 		return "#" + t;
 	}
 	
+	@Override
 	public Color getValue() {
 		return myColor;
 	}

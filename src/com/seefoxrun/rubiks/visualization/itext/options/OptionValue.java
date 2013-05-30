@@ -37,6 +37,7 @@ public class OptionValue implements OptionType {
 		return String.format("%f %s",value.getValue(), value.getUnit().toString());
 	}
 	
+	@Override
 	public Value getValue() {
 		return value;
 	}

@@ -13,6 +13,10 @@ public class SolutionNode implements Comparable<SolutionNode> {
 	public Cube getCube() {
 		return c;
 	}
+	
+	public byte[] toBytes() {
+		return c.byteSerialize();
+	}
 
 	@Override
 	public boolean equals(Object o) {

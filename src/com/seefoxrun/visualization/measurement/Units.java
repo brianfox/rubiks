@@ -39,6 +39,7 @@ public enum Units {
 		throw new IllegalArgumentException();
 	}
 
+	@Override
 	public String toString() {
 		return text;
 	}

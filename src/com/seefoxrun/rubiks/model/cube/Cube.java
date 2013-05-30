@@ -383,11 +383,15 @@ public abstract class Cube implements Comparable<Cube>, Cloneable, Serializable 
 	} 
 
 	public byte[] byteSerialize() {
+		/*
 		byte[] cubesize = ArrayUtil.intToByteArray(size());
 		byte[] arraysize = ArrayUtil.intToByteArray(pieces.length);
 		byte[] fmap = ArrayUtil.intToByteArray(faceMap.val());
 		byte[] cube = pieces.clone();
 		return ArrayUtil.concatenateArrays(cubesize, arraysize, fmap, cube);
+		*/
+		
+		return pieces.clone();
 	}
 
 

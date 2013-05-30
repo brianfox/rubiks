@@ -7,22 +7,29 @@ import com.seefoxrun.rubiks.model.cube.Cube;
 import com.seefoxrun.rubiks.model.cube.Dir;
 import com.seefoxrun.rubiks.model.cube.Face;
 
+import fox.brian.storage.Storage;
+
 public class SolutionTree {
 	
 	protected int depth = 0;
 	protected Cube root;
 	
-	private ArrayList<SolutionNode> vestal;
-	private TreeSet<SolutionNode> stored;
-	
+	private ArrayList<Cube> vestal;
+	private TreeSet<Cube> stored;
+	private Storage bigStore;
 	
 	public SolutionTree(Cube root) {
 		depth = 1;
 		this.root = root;
-		vestal = new ArrayList<SolutionNode>();
-		stored = new TreeSet<SolutionNode>();
-		vestal.add(new SolutionNode(root));
-		stored.add(new SolutionNode(root));
+		
+		vestal = new ArrayList<Cube>();
+		stored = new TreeSet<Cube>();
+		bigStore = new Storage();
+		
+		vestal.add(root);
+		stored.add(root);
+		bigStore.add(root.byteSerialize());
+		
 	}
 
 	public int getDepth() {
@@ -37,32 +44,33 @@ public class SolutionTree {
 		
 		long start = System.nanoTime();
 
-		ArrayList<SolutionNode> discovered = new ArrayList<SolutionNode>();
-		depth++;
-		
+		ArrayList<Cube> discovered = new ArrayList<Cube>();
+	
 		int twists = 0;
 		
-		for (SolutionNode n : vestal) {
-			Cube c = n.getCube();
+		for (Cube c : vestal) {
 			for (Face f : Face.values()) {
 				for (Dir d : Dir.values()) {
 					for (int s=0; s < c.countSlices(f); s++) {
 						twists++;
-						Cube candidate = c.twist(f, d, s);
-						SolutionNode ncandidate = new SolutionNode(candidate);
-						if (stored.add(ncandidate)) 
-							discovered.add(ncandidate);
+						Cube candidate = c.twist(f, d, s).getRepresentativeCube(Cube.USE_SPATIAL);
+						boolean bs = bigStore.add(candidate.byteSerialize());
+						boolean ns = stored.add(candidate);
+						if (bs) 
+							discovered.add(candidate);
 							
 					}
 				}
 			}
 		}
+		if (twists == 0)
+			return null;
 		
 		vestal = discovered;
-
 		long end = System.nanoTime();
-
-		return new AdvancementStats(depth, twists, vestal.size(), twists - vestal.size(), end-start);
+		AdvancementStats stats = new AdvancementStats(depth, twists, vestal.size(), twists - vestal.size(), end-start);
+		depth++;
+		return stats;
 	}
 	
 	@Override 

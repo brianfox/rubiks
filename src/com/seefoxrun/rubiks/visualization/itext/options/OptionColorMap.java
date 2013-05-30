@@ -20,6 +20,7 @@ public class OptionColorMap implements OptionType {
 		return ColorMap.toString(cm);
 	}
 	
+	@Override
 	public ColorMap getValue() {
 		return cm;
 	}

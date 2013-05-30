@@ -105,10 +105,12 @@ class Cube3 extends Cube {
 		return loops[face.val()].length;
 	}
 
+	@Override
 	protected byte[][] getLoopPieces(Face face, int slice) {
 		return loops[face.val()][slice];
 	}
 
+	@Override
 	protected byte[][] getFacePieces(Face face) {
 		return faces[face.val()];
 	}

@@ -29,7 +29,7 @@ public class Document implements Closeable {
 	private String filename;
 	private Page page;
 	
-	private com.itextpdf.text.Document document;
+	private com.itextpdf.text.Document document; 
 	private PdfWriter writer;
 	private PdfContentByte cb;
 	private PdfTemplate tp;

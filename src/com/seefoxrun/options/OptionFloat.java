@@ -28,6 +28,7 @@ public class OptionFloat implements OptionType {
 		return Float.toString(f);
 	}
 	
+	@Override
 	public Float getValue() {
 		return f;
 	}

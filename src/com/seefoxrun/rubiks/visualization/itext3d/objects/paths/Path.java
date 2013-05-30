@@ -132,6 +132,7 @@ public abstract class Path {
 			this.stop  = new Matrix(new double[] { stopX,  stopY,  stopZ, 1} );
 		}
 
+		@Override
 		public void scale(double x, double y) {
 			Matrix scale = new Matrix(new double[]{x,y,1,1});
 			start =    start.multiply(scale);
@@ -195,6 +196,7 @@ public abstract class Path {
 
 		}
 
+		@Override
 		public void scale(double x, double y) {
 			Matrix scale = new ScalingMatrix(x, y, 1);
 			start =    scale.multiply(start);

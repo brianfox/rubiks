@@ -28,6 +28,7 @@ public class OptionInt implements OptionType {
 		return Integer.toString(i);
 	}
 	
+	@Override
 	public Integer getValue() {
 		return i;
 	}

@@ -195,6 +195,7 @@ public class Piece implements Comparable<Piece> {
 		return true; // (triplets_axisaxis2[axis[0]][axis[1]] == axis[2]);
 	}
 
+	@Override
 	public int compareTo(Piece p) {
 		for (int i=0; i < 3; i++)
 			if (p.axis[i] != axis[i])

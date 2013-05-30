@@ -82,6 +82,7 @@ public abstract class Compound extends Object3D {
 		}
 	}	
 
+	@Override
 	public String toDebugString(Matrix m) {
 		Matrix beg = getCenter();
 		Matrix begn = getNormal();

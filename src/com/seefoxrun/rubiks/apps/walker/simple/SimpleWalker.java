@@ -12,7 +12,8 @@ public class SimpleWalker {
 	private SolutionTree tree;
 
 	public SimpleWalker(int size) {
-		tree = new SolutionTree(Cube.createCube(size));
+		Cube c = Cube.createCube(size);
+		tree = new SolutionTree(c);
 	}
 
 	public void process() {
