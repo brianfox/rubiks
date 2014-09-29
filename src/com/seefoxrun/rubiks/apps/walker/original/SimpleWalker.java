@@ -39,7 +39,11 @@ public class SimpleWalker {
 	
 	public void process(int writeMin, int writeMax) {
 		int step = 0;
+		long start = 0; 
+		
 		while (true) {
+			if (step == 0)
+				start = System.nanoTime();
 			if (!tree.advance())
 				break;
 			
@@ -61,7 +65,10 @@ public class SimpleWalker {
 			}
 
 			if (step >= minlevel && step <= maxlevel) {
-				Report.printLevel(step, tree.countLeaves(), tree.size(), nliving, ndead, symmetry.size(), timer.millisecondsElapsed()/1000, histogram);
+				long duration = System.nanoTime() - start;
+				start = System.nanoTime();
+				
+				Report.printLevel(step, tree.countLeaves(), tree.size(), nliving, ndead, symmetry.size(), duration/1000000, histogram);
 				String filename = 
 						"rubiks_lvl_" + step  
 						+ (spatial ? "_spatial" : "") 
