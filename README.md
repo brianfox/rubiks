@@ -9,6 +9,6 @@ Reverse explores CW v CCW rotations.
 
 I also became very interested in visualizing the data.  I added a 3D renderer which somewhat accurately draws a cube in 3D space using PDF bezier curves and lines.  Early test renders can be found here:
 
-
+https://github.com/brianfox/rubiks/tree/master/notes/visualization/proofs/3d
 
 
